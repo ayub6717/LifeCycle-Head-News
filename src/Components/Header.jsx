@@ -27,8 +27,8 @@ class Header extends Component {
     const { category, changeCategory } = this.props;
     return (
       <div className="my-4">
-        <h1 className="mb-4" style={{ fontWeight: "300" }}>
-          MD AYUB
+        <h1 className="mb-4" style={{ fontWeight: "300", textAlign: "center"}}>
+          <b>LifeCycle Head News</b>
         </h1>
         <input
           ref={this.searchBarRef}
@@ -48,7 +48,7 @@ class Header extends Component {
                     onClick={() => changeCategory(infoCategory[item])}
                     className="btn btn-sm btn-warning mr-2 mb-2"
                   >
-                    {`#${infoCategory[item]}`}
+                    {`${infoCategory[item]}`}
                   </button>
                 );
               }
@@ -56,9 +56,9 @@ class Header extends Component {
               return (
                 <button
                   onClick={() => changeCategory(infoCategory[item])}
-                  className="btn btn-sm btn-light mr-2 mb-2"
+                  className="btn btn-sm btn-dark mr-2 mb-2"
                 >
-                  {`#${infoCategory[item]}`}
+                  {`${infoCategory[item]}`}
                 </button>
               );
             })}

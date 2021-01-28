@@ -128,7 +128,7 @@ class App extends React.Component {
       totalPage,
     } = this.state.data;
     return (
-      <div>
+      <div className="Bg">
         <div className="container">
           <div className="row">
             <div className="col-sm-6 offset-md-3">
@@ -161,8 +161,8 @@ class App extends React.Component {
                     handlePageChange={this.handlePageChange}
                     goToPage={this.goToPage}
                   />
-                  <button
-                    className="btn btn-secondary my-5"
+                  <button style={{marginLeft: "39%"}}
+                    className="btn btn-dark my-5"
                     onClick={this.goToTop}
                   >
                     Go To Top
