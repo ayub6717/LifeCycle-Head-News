@@ -1,6 +1,7 @@
 import React, { Component, createRef } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import News, { infoCategory } from "./components/Info";
 
 const news = new News(infoCategory.technology);
 class App extends React.Component {
