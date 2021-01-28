@@ -13,7 +13,7 @@ class Pagination extends Component {
       isPrevious,
       isNext,
       handlePageChange,
-      goToPage
+      goToPage,
     } = this.props;
     return (
       <div className="d-flex my-5 align-items-center">
@@ -32,8 +32,8 @@ class Pagination extends Component {
               type="number"
               value={currentPage}
               onChange={(e) => handlePageChange(e.target.value)}
-              onKeyPress={(e)=>{
-                if(e.key==='Enter'){
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
                   goToPage();
                   this.setState({ isEditable: false });
                 }

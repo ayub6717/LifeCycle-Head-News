@@ -1,14 +1,11 @@
-import React, { Component, createRef } from "react";
+import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import News, { infoCategory } from "./components/Info";
-import Newslist from "./components/Newslist";
-import Pagination from "./components/Pagination";
-import Loading from "./components/Loading";
-import Reftest from "./components/Reftest";
-
-
-
+import Header from "./Components/Header";
+import News, { infoCategory } from "./Components/Info";
+import Newslist from "./Components/Newslist";
+import Pagination from "./Components/Pagination";
+import Loading from "./Components/Loading";
+import Reftest from "./Components/Reftest";
 
 const news = new News(infoCategory.technology);
 class App extends React.Component {
@@ -31,12 +28,12 @@ class App extends React.Component {
         this.setState({ isLoading: false });
       });
 
-      console.log(this.jumbotronRef);
+    console.log(this.jumbotronRef);
   }
 
   goToTop = () => {
-    window.scroll(0, this.aboutResult.current.scrollTop)
-  }
+    window.scroll(0, this.aboutResult.current.scrollTop);
+  };
 
   next = () => {
     if (this.state.data.isNext) {
@@ -107,10 +104,10 @@ class App extends React.Component {
       });
   };
 
-  search = searchTerm => {
+  search = (searchTerm) => {
     this.setState({ isLoading: true });
     news
-      .search(searchTerm) 
+      .search(searchTerm)
       .then((data) => {
         this.setState({ data, isLoading: false });
       })
@@ -164,12 +161,15 @@ class App extends React.Component {
                     handlePageChange={this.handlePageChange}
                     goToPage={this.goToPage}
                   />
-                  <button className="btn btn-secondary my-5" onClick={this.goToTop}>
+                  <button
+                    className="btn btn-secondary my-5"
+                    onClick={this.goToTop}
+                  >
                     Go To Top
                   </button>
                 </div>
               )}
-              < Reftest ref={this.jumbotronRef} />
+              <Reftest ref={this.jumbotronRef} />
             </div>
           </div>
         </div>
