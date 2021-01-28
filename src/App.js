@@ -5,6 +5,8 @@ import News, { infoCategory } from "./components/Info";
 import Newslist from "./components/Newslist";
 import Pagination from "./components/Pagination";
 import Loading from "./components/Loading";
+import Reftest from "./components/Reftest";
+
 
 
 
