@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import News, { infoCategory } from "./components/Info";
 import Newslist from "./components/Newslist";
 import Pagination from "./components/Pagination";
+import Loading from "./components/Loading";
+
 
 
 const news = new News(infoCategory.technology);
