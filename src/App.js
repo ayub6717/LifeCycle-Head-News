@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/Header";
 import News, { infoCategory } from "./components/Info";
 import Newslist from "./components/Newslist";
+import Pagination from "./components/Pagination";
+
 
 const news = new News(infoCategory.technology);
 class App extends React.Component {
